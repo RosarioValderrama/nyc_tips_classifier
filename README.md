@@ -1,31 +1,46 @@
 # NYC Tips Classifier 🚖
 
-Este proyecto tiene como objetivo predecir la probabilidad de que un viaje en taxi en NYC (2020) reciba una propina, utilizando técnicas de Machine Learning. El código ha sido estructurado siguiendo buenas prácticas de ingeniería de software y ciencia de datos.
+Este proyecto tiene como objetivo predecir la probabilidad de que un viaje en taxi en Nueva York (2020) reciba una propina alta, utilizando técnicas de Machine Learning. Fue desarrollado para la asignatura de Desarrollo de Proyectos y Productos de Datos del Magíster en Data Science (UDD), siguiendo buenas prácticas de ingeniería de software y ciencia de datos.
 
 ---
 
 ## Estructura del Proyecto
 
 ```text
-├── data/
-│   ├── raw/           <- Datos originales descargados
-│   └── processed/     <- Datos transformados para modelado
-├── models/            <- Modelos entrenados y serializados
-├── notebooks/         <- Notebooks para exploración y validación
-├── src/
-│   ├── __init__.py
-│   ├── config.py              <- Parámetros y rutas globales
+├── data/                    # Datos utilizados (raw y procesados)
+│   ├── raw/                # Datos originales descargados
+│   └── processed/          # Datos listos para modelado
+│
+├── models/                 # Modelos entrenados y serializados (.pkl)
+│   └── model_logreg.pkl
+│
+├── notebooks/              # Desarrollo exploratorio y pruebas
+│   ├── 01_model_training.ipynb
+│   ├── 02_model_predict.ipynb
+│   ├── 03_model_automat.ipynb
+│   └── f1_train.json       # Métricas del entrenamiento automatizado
+│
+├── references/             # Documentación externa o papers (si aplica)
+│
+├── reports/
+│   └── figures/            # Gráficos generados (.png, .jpg)
+│
+├── src/                    # Código fuente modularizado
 │   ├── data/
-│   │   └── dataset.py         <- Carga y limpieza básica de datos
+│   │   └── dataset.py           # Carga y preprocesamiento de datos
 │   ├── features/
-│   │   └── build_features.py  <- Generación de variables predictoras
+│   │   └── build_features.py    # Generación de variables predictoras
 │   ├── modeling/
-│   │   ├── train.py           <- Entrenamiento del modelo
-│   │   └── predict.py         <- Predicción y evaluación
-│   └── visualization/
-│       └── plots.py           <- Visualización de resultados
-├── requirements.txt     <- Lista de dependencias del proyecto
-├── README.md            <- Este archivo
+│   │   ├── train.py             # Entrenamiento del modelo
+│   │   └── predict.py           # Predicción y métricas
+│   ├── visualization/
+│   │   └── plots.py             # Gráficos de resultados y métricas
+│   └── __init__.py             # Inicialización del módulo
+│
+├── requirements.txt         # Dependencias del proyecto
+├── README.md                # Este archivo
+└── LICENSE
+
 
 ```
 
