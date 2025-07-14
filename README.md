@@ -11,10 +11,11 @@ Este proyecto tiene como objetivo predecir la probabilidad de que un viaje en ta
 │   ├── raw/                # Datos originales descargados
 │   └── processed/          # Datos listos para modelado
 │
-├── models/                 # Modelos entrenados y serializados (.pkl)
-│   └── model_logreg.pkl
+├── models/                 # Modelos entrenados 
+│   └── random_forest_model.joblib
 │
 ├── notebooks/              # Desarrollo exploratorio y pruebas
+│   ├── original_notebook.ipynb
 │   ├── 01_model_training.ipynb
 │   ├── 02_model_predict.ipynb
 │   ├── 03_model_automat.ipynb
@@ -27,14 +28,18 @@ Este proyecto tiene como objetivo predecir la probabilidad de que un viaje en ta
 │
 ├── src/                    # Código fuente modularizado
 │   ├── data/
-│   │   └── dataset.py           # Carga y preprocesamiento de datos
+│   │   ├── dataset.py           # Carga y preprocesamiento de datos
+│   │   └──__init__.py             # Inicialización del módulo
 │   ├── features/
-│   │   └── build_features.py    # Generación de variables predictoras
+│   │   ├── build_features.py    # Generación de variables predictoras
+│   │   └──__init__.py             # Inicialización del módulo
 │   ├── modeling/
 │   │   ├── train.py             # Entrenamiento del modelo
-│   │   └── predict.py           # Predicción y métricas
+│   │   ├── predict.py           # Predicción y métricas
+│   │   └──__init__.py             # Inicialización del módulo
 │   ├── visualization/
-│   │   └── plots.py             # Gráficos de resultados y métricas
+│   │   ├── plots.py             # Gráficos de resultados y métricas
+│   │   └── __init__.py             # Inicialización del módulo  
 │   └── __init__.py             # Inicialización del módulo
 │
 ├── requirements.txt         # Dependencias del proyecto
